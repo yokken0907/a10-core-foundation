@@ -1,0 +1,10 @@
+# Evaluation-Only License Notice
+
+Copyright (c) 2026 Keiji Yoshimura.
+
+This material is provided for evaluation, review, reproducibility checking, and research discussion only.
+No permission is granted for production deployment, safety-critical use, commercial implementation,
+redistribution as a product, or incorporation into hardware or operational systems without a separate written agreement.
+
+The contents are not certified, not safety validated, and not a substitute for expert engineering review,
+experimental validation, regulatory review, or manufacturer-side verification.

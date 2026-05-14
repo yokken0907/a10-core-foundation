@@ -1,0 +1,6 @@
+{
+  "source_zip": "a10-ucf-alpha.zip",
+  "status": "deferred_not_in_public_release",
+  "reason": "speculative support; avoid confusing it with validated A10 core or cosmology evidence",
+  "sha256": "2bf6caddffc8ed8a6be347c3f14bb23d951187f8f7ead005773ce21d8ec9de32"
+}

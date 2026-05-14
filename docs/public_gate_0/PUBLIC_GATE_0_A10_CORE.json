@@ -1,0 +1,28 @@
+{
+  "decision": "PASS-AS-FOUNDATION-DOCUMENTS-ONLY-A10-CORE-PUBLIC-GATE-0",
+  "repository": "a10-core-foundation",
+  "public_version": "v0.1.1-public-gate",
+  "date": "2026-05-07",
+  "classification": "A10構造化プライア基礎文書・ポートフォリオ入口",
+  "allowed_public_description": "A conceptual and documentation-level foundation for using A10 as a structured prior / geometric steering framework across reduced models.",
+  "allowed_public_description_ja": "A10をstructured prior / geometric steering frameworkとして扱うための概念・文書レベルの基礎資料。",
+  "forbidden_claims": [
+    "fundamental physical law",
+    "commercially validated framework",
+    "safety-certified framework",
+    "universal optimizer",
+    "replacement for domain expertise"
+  ],
+  "publication_posture": {
+    "github": "GO as portal/foundation docs after URL replacement.",
+    "zenodo": "OPTIONAL; useful if cited as a versioned documentation artifact.",
+    "jxiv": "NOT RECOMMENDED as standalone unless converted into a clearly framed conceptual note."
+  },
+  "manifest_policy": "manifest-excluding-self",
+  "manifest_entries_verified": 23,
+  "manifest_errors": [],
+  "notes": [
+    "This is not an evidence package for a physical or engineering result; it is a documentation foundation."
+  ],
+  "claim_promotion_authorized": false
+}
