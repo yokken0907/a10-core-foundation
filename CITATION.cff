@@ -8,5 +8,6 @@ authors:
     affiliation: Independent Researcher
 abstract: "AI-assisted independent research archive for the A10 structured-prior / geometric-steering framework."
 repository-code: "https://github.com/yokken0907/a10-core-foundation"
+url: "https://github.com/yokken0907/a10-core-foundation"
 date-released: "2026-05-07"
 version: "v0.1.1-public-gate"
