@@ -1,0 +1,30 @@
+{
+  "package": "a10-core-foundation-framework-visual-orientation",
+  "version": "0.2.0",
+  "generated_utc": "2026-05-15T13:48:39.823971+00:00",
+  "recommended_repository_path": "docs/framework_visual_orientation/",
+  "claim_boundary": "framework visual orientation only; not scientific computation, validation, certification, or proof",
+  "note": "JSON manifest excludes itself to avoid recursive self-hashing.",
+  "files": [
+    {
+      "path": "docs/framework_visual_orientation/FRAMEWORK_VISUAL_ORIENTATION_SCOPE.md",
+      "size_bytes": 1099,
+      "sha256": "cdd3ea1ec110cba24b209f11b3323b80ec563101236c937a027a053040cdf5c2"
+    },
+    {
+      "path": "docs/framework_visual_orientation/INSTALL_NOTE.md",
+      "size_bytes": 257,
+      "sha256": "7417a6b2b83786f7b577b883ed8d77a6168005bf715d23911834d32546ddfd1c"
+    },
+    {
+      "path": "docs/framework_visual_orientation/README_FRAMEWORK_VISUAL_ORIENTATION.md",
+      "size_bytes": 1201,
+      "sha256": "cae29212fe3e808d441a71e13b872215279c261e0a62c103e8b7c662b1950d00"
+    },
+    {
+      "path": "docs/framework_visual_orientation/index.html",
+      "size_bytes": 18634,
+      "sha256": "e37f0fcc87997fb56432f565a2613acb8a1f869195a6c8ea82ee926a19ac9ab8"
+    }
+  ]
+}

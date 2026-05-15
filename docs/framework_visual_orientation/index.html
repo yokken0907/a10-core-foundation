@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A10 Core Foundation — Framework Visual Orientation</title>
+<style>
+:root{
+  --bg:#f5f6f8; --panel:#fff; --ink:#161a22; --muted:#5d6675; --line:#d9dee8;
+  --soft:#f0f3f8; --blue:#2f56d8; --violet:#7b45c8; --green:#1f7a4d;
+  --orange:#a05a16; --red:#9b2f2f; --shadow:0 18px 46px rgba(20,30,50,.10);
+  --radius:22px;
+}
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(135deg,#f8f9fb 0,#f1f3f7 45%,#e9edf5 100%);
+color:var(--ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.58}
+header,main{max-width:1240px;margin:auto;padding:22px}
+.hero{background:rgba(255,255,255,.9);border:1px solid var(--line);border-radius:var(--radius);
+box-shadow:var(--shadow);padding:30px}
+h1{font-size:clamp(27px,4vw,45px);line-height:1.12;margin:0 0 10px;letter-spacing:-.035em}
+h2{font-size:clamp(21px,3vw,31px);margin:0 0 14px;letter-spacing:-.025em}
+h3{font-size:18px;margin:18px 0 8px}
+p{margin:0 0 12px}.muted{color:var(--muted)}
+code{background:#edf1f7;border:1px solid #dce2ec;border-radius:7px;padding:1px 6px}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.badge{background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:7px 11px;font-size:13px;color:#303747}
+.layout{display:grid;grid-template-columns:310px 1fr;gap:18px;align-items:start}
+nav{position:sticky;top:16px;background:rgba(255,255,255,.91);border:1px solid var(--line);border-radius:var(--radius);
+box-shadow:var(--shadow);padding:12px}
+.navbtn{display:flex;gap:10px;align-items:flex-start;border:0;background:transparent;width:100%;text-align:left;padding:12px;border-radius:16px;
+cursor:pointer;color:var(--ink);font-size:14px}.navbtn:hover{background:#f0f3f8}.navbtn.active{background:#eaf0ff;color:#18389f;font-weight:800}
+.navnum{min-width:28px;height:28px;border-radius:50%;display:inline-flex;justify-content:center;align-items:center;background:#fff;border:1px solid var(--line);font-weight:800}
+.card{background:rgba(255,255,255,.94);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px;min-height:720px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.note{background:#f7f9fc;border:1px solid var(--line);border-radius:18px;padding:15px}
+.note.green{background:#effaf4;border-color:#b9dfca;color:#153d28}.note.warn{background:#fff7ec;border-color:#edcfaa;color:#573508}
+.note.red{background:#fff1f1;border-color:#e8baba;color:#6b2222}
+canvas{width:100%;min-height:320px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(180deg,#fff,#fbfcff);display:block}
+.controls{display:flex;flex-wrap:wrap;gap:9px;margin:14px 0}
+button.action{border:0;border-radius:14px;padding:10px 13px;cursor:pointer;font-weight:800;background:var(--blue);color:#fff;box-shadow:0 8px 18px rgba(47,86,216,.23)}
+button.secondary{border:1px solid var(--line);border-radius:14px;padding:10px 13px;cursor:pointer;font-weight:800;background:#eef2f7;color:#303747}
+.kpi{background:#f7f9fc;border:1px solid var(--line);border-radius:16px;padding:14px}.kpi .label{font-size:12px;color:var(--muted)}.kpi .val{font-size:20px;font-weight:900}
+table{width:100%;border-collapse:collapse;margin:10px 0 0;font-size:14px}th,td{border-bottom:1px solid var(--line);padding:10px;text-align:left;vertical-align:top}
+th{background:#f5f7fb;color:#303747}.hidden{display:none}.small{font-size:13px;color:var(--muted)}
+.loopitem{display:flex;gap:10px;align-items:flex-start;margin:9px 0;padding:12px;border:1px solid var(--line);border-radius:16px;background:#f8f9fc}
+.loopitem .dot{min-width:16px;height:16px;border-radius:50%;background:#c7ceda;margin-top:4px}.loopitem.active{border-color:#8ca1ff;background:#edf2ff}.loopitem.active .dot{background:var(--blue)}
+.footerlinks{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}a{color:#2349ca;text-decoration:none;font-weight:800}a:hover{text-decoration:underline}
+@media(max-width:920px){.layout,.grid2,.grid3{grid-template-columns:1fr}nav{position:relative;top:auto}}
+</style>
+</head>
+<body>
+<header>
+<section class="hero">
+<h1>A10 Core Foundation<br>Framework Visual Orientation</h1>
+<p class="muted">
+This is a repository-facing visual orientation page for the A10 core foundation.
+It frames A10 as a <strong>structured-prior / geometric-steering methodology</strong> for constrained search,
+model design, and evaluation workflows. It is not a claim that A10 is a fundamental physical law,
+a validated industrial product, or a completed scientific theory.
+</p>
+<div class="badges">
+<span class="badge">target: technically interested readers</span>
+<span class="badge">framework-level orientation</span>
+<span class="badge">browser-only</span>
+<span class="badge">no scientific validation</span>
+<span class="badge">claim-boundary preserving</span>
+</div>
+</section>
+</header>
+
+<main>
+<div class="layout">
+<nav>
+<button class="navbtn active" data-section="reader"><span class="navnum">0</span><span>Reader level<br><small>foundation, not proof</small></span></button>
+<button class="navbtn" data-section="loop"><span class="navnum">1</span><span>A10 loop<br><small>mission → boundary</small></span></button>
+<button class="navbtn" data-section="layers"><span class="navnum">2</span><span>Framework layers<br><small>what A10 organizes</small></span></button>
+<button class="navbtn" data-section="domains"><span class="navnum">3</span><span>Domain transfer<br><small>core vs applications</small></span></button>
+<button class="navbtn" data-section="evidence"><span class="navnum">4</span><span>Evidence hierarchy<br><small>what carries weight</small></span></button>
+<button class="navbtn" data-section="repo"><span class="navnum">5</span><span>How to read repo<br><small>where to look first</small></span></button>
+<button class="navbtn" data-section="boundary"><span class="navnum">6</span><span>Claim boundary<br><small>non-claims</small></span></button>
+</nav>
+
+<section class="card">
+
+<div id="reader" class="section">
+<h2>0. Reader level and purpose</h2>
+<div class="grid2">
+<div>
+<p>
+This page is for readers who have arrived from a paper, GitHub profile, Zenodo archive, or domain-specific A10 project,
+and want to understand what the common A10 foundation is supposed to mean.
+</p>
+<p>
+It is intentionally not a popular-science explanation. It assumes the reader can tolerate terms such as
+<code>structured prior</code>, <code>reduced surrogate</code>, <code>constraint</code>, <code>tail risk</code>, and <code>claim boundary</code>.
+</p>
+<div class="note green">
+<strong>Correct use:</strong><br>
+Use this page as a visual map before reading <code>A10_CORE.md</code>, <code>CLAIM_BOUNDARY.md</code>, and later domain-specific repositories.
+</div>
+</div>
+<div>
+<canvas id="readerCanvas" width="640" height="400"></canvas>
+<p class="small">Conceptual orientation only. No domain result is validated by this page.</p>
+</div>
+</div>
+</div>
+
+<div id="loop" class="section hidden">
+<h2>1. A10 loop: mission variable under hard constraints</h2>
+<p>
+Across the portfolio, A10 is best read as a repeatable design discipline: define what must be preserved,
+identify where the system fails, then restrict the search using an interpretable structured prior.
+</p>
+<div class="grid2">
+<div>
+<div id="loop0" class="loopitem active"><span class="dot"></span><span><strong>1. Mission variable</strong><br><small>What must be preserved or achieved?</small></span></div>
+<div id="loop1" class="loopitem"><span class="dot"></span><span><strong>2. Bottlenecks / failure boundaries</strong><br><small>Where does the system break?</small></span></div>
+<div id="loop2" class="loopitem"><span class="dot"></span><span><strong>3. Reduced surrogate</strong><br><small>Use an auditable approximation, not an opaque miracle.</small></span></div>
+<div id="loop3" class="loopitem"><span class="dot"></span><span><strong>4. Structured prior / gate / barrier</strong><br><small>Constrain the search family.</small></span></div>
+<div id="loop4" class="loopitem"><span class="dot"></span><span><strong>5. Robust evaluation</strong><br><small>Check failure rate, worst case, and CVaR-style tail risk.</small></span></div>
+<div id="loop5" class="loopitem"><span class="dot"></span><span><strong>6. Claim boundary</strong><br><small>Do not promote a surrogate result into a deployment claim.</small></span></div>
+<div class="controls">
+<button class="action" onclick="animateLoop()">step through A10 loop</button>
+<button class="secondary" onclick="resetLoop()">reset</button>
+</div>
+</div>
+<div>
+<canvas id="loopCanvas" width="640" height="430"></canvas>
+</div>
+</div>
+</div>
+
+<div id="layers" class="section hidden">
+<h2>2. Framework layers: what A10 organizes</h2>
+<div class="grid3">
+<div class="kpi"><div class="label">primary role</div><div class="val">structured prior</div></div>
+<div class="kpi"><div class="label">control metaphor</div><div class="val">geometric steering</div></div>
+<div class="kpi"><div class="label">safety discipline</div><div class="val">claim boundary</div></div>
+</div>
+<div class="grid2">
+<div>
+<canvas id="layersCanvas" width="640" height="420"></canvas>
+</div>
+<div>
+<h3>Layered reading</h3>
+<table>
+<tr><th>Layer</th><th>Meaning</th></tr>
+<tr><td>Conceptual layer</td><td>A common design language across constrained nonlinear systems.</td></tr>
+<tr><td>Model layer</td><td>Reduced surrogate, ansatz, gate, barrier, or structured parameterization.</td></tr>
+<tr><td>Evaluation layer</td><td>Nominal performance plus failure boundary and tail-risk diagnostics.</td></tr>
+<tr><td>Publication layer</td><td>Explicit non-claims, AI-use disclosure, reproducibility notes.</td></tr>
+</table>
+</div>
+</div>
+</div>
+
+<div id="domains" class="section hidden">
+<h2>3. Domain transfer: core foundation versus applications</h2>
+<p>
+The core foundation is not itself a domain result. Each application must earn its own evidence.
+The same design pattern may appear in cosmology, BMS, cooling, rocket surrogates, UAPST, QOC, or moderation workbench projects,
+but validation does not transfer automatically.
+</p>
+<div class="grid2">
+<div>
+<canvas id="domainsCanvas" width="640" height="420"></canvas>
+</div>
+<div class="note warn">
+<h3>Important separation</h3>
+<ul>
+<li>The core repository defines the language and posture.</li>
+<li>Domain repositories provide domain-specific models, scripts, figures, and checks.</li>
+<li>A successful result in one domain does not validate another domain.</li>
+<li>Industrial or physical claims require expert review and independent validation.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="evidence" class="section hidden">
+<h2>4. Evidence hierarchy</h2>
+<p>
+A foundation repository must not look like it is claiming more than it contains. This hierarchy separates documentation value from domain validation.
+</p>
+<table>
+<tr><th>Layer</th><th>Status</th><th>How to treat it</th></tr>
+<tr><td>A10 core design note</td><td>framework definition</td><td>Useful for understanding common vocabulary and workflow.</td></tr>
+<tr><td>Claim boundary documents</td><td>publication control</td><td>High value for preventing overclaiming.</td></tr>
+<tr><td>AI-assistance disclosure</td><td>transparency layer</td><td>Important for trust and reproducibility posture.</td></tr>
+<tr><td>Practical positioning sheet</td><td>outreach layer</td><td>Useful, but not a validation result.</td></tr>
+<tr><td>Domain-specific repositories</td><td>application evidence</td><td>Must be evaluated separately in each domain.</td></tr>
+</table>
+<div class="note green">
+<strong>Best interpretation:</strong>
+A10 Core is a portfolio entrance and shared discipline document, not a universal proof package.
+</div>
+</div>
+
+<div id="repo" class="section hidden">
+<h2>5. How to read this repository first</h2>
+<p>
+For a technically interested reader, the fastest reading path is:
+</p>
+<div class="grid2">
+<div class="note">
+<h3>Suggested reading order</h3>
+<ol>
+<li><code>README.md</code> / <code>README_ja.md</code></li>
+<li><code>A10_CORE.md</code> / <code>A10_CORE_ja.md</code></li>
+<li><code>CLAIM_BOUNDARY.md</code></li>
+<li><code>LIMITATIONS.md</code> and <code>DISCLAIMER.md</code></li>
+<li><code>AI_ASSISTANCE_DISCLOSURE.md</code></li>
+<li><code>PRACTICAL_POSITIONING_SHEET_ja.md</code></li>
+<li><code>docs/public_gate_0/</code></li>
+</ol>
+</div>
+<div class="note">
+<h3>What not to expect</h3>
+<ul>
+<li>No complete physical theory proof.</li>
+<li>No universal optimizer.</li>
+<li>No deployment-ready industrial tool.</li>
+<li>No safety certification.</li>
+<li>No replacement for domain expertise.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="boundary" class="section hidden">
+<h2>6. Claim boundary: foundation-level non-claims</h2>
+<div class="grid2">
+<div class="note green">
+<h3>Allowed reading</h3>
+<ul>
+<li>A conceptual and documentation-level foundation.</li>
+<li>A structured-prior / geometric-steering framework.</li>
+<li>A common language for constrained model construction.</li>
+<li>A portfolio entrance for domain-specific A10 repositories.</li>
+</ul>
+</div>
+<div class="note red">
+<h3>Forbidden reading</h3>
+<ul>
+<li>A10 is a proven fundamental law.</li>
+<li>A10 is a universal theory of nature.</li>
+<li>A10 applications are automatically valid.</li>
+<li>A10 has been commercially or safety validated.</li>
+<li>AI-assisted outputs should be accepted without expert review.</li>
+</ul>
+</div>
+</div>
+<p class="muted">
+The goal is a professional orientation page: visually helpful, technically honest, and restrained.
+</p>
+<div class="footerlinks">
+<a href="https://github.com/yokken0907/a10-core-foundation" target="_blank" rel="noreferrer">GitHub repository</a>
+<a href="https://doi.org/10.5281/zenodo.20185799" target="_blank" rel="noreferrer">Zenodo DOI</a>
+</div>
+</div>
+
+</section>
+</div>
+</main>
+
+<script>
+const sections=["reader","loop","layers","domains","evidence","repo","boundary"];
+document.querySelectorAll(".navbtn").forEach(btn=>btn.addEventListener("click",()=>{
+ document.querySelectorAll(".navbtn").forEach(b=>b.classList.remove("active")); btn.classList.add("active");
+ const id=btn.dataset.section; sections.forEach(s=>document.getElementById(s).classList.toggle("hidden",s!==id)); setTimeout(redraw,20);
+}));
+function C(id){return document.getElementById(id).getContext("2d")} function clear(c){c.clearRect(0,0,c.canvas.width,c.canvas.height)}
+function text(c,s,x,y,size=14,color="#161a22",align="left",w="600"){c.fillStyle=color;c.font=`${w} ${size}px system-ui,sans-serif`;c.textAlign=align;c.fillText(s,x,y)}
+function line(c,x1,y1,x2,y2,color="#9aa4b5",w=2){c.strokeStyle=color;c.lineWidth=w;c.beginPath();c.moveTo(x1,y1);c.lineTo(x2,y2);c.stroke()}
+function dot(c,x,y,r,color){c.fillStyle=color;c.beginPath();c.arc(x,y,r,0,Math.PI*2);c.fill()}
+function rect(c,x,y,w,h,r,fill,stroke="#d9dee8"){c.fillStyle=fill;c.strokeStyle=stroke;c.lineWidth=1.5;c.beginPath();c.moveTo(x+r,y);c.arcTo(x+w,y,x+w,y+h,r);c.arcTo(x+w,y+h,x,y+h,r);c.arcTo(x,y+h,x,y,r);c.arcTo(x,y,x+w,y,r);c.closePath();c.fill();c.stroke()}
+function drawReader(){
+ const c=C("readerCanvas");clear(c); text(c,"Foundation repository posture",320,34,20,"#161a22","center","850");
+ const boxes=[
+  ["A10 Core",100,130,"#eef3ff"],["shared language",320,130,"#f1edff"],["domain repositories",540,130,"#effaf4"],
+  ["not a law",160,270,"#fff7ec"],["not validation",480,270,"#fff1f1"]
+ ];
+ boxes.forEach(b=>{rect(c,b[1]-88,b[2]-40,176,80,18,b[3]);text(c,b[0],b[1],b[2]+5,15,"#161a22","center","800")});
+ [[188,130,232,130],[408,130,452,130],[225,165,175,232],[415,165,465,232]].forEach(a=>{line(c,a[0],a[1],a[2],a[3],"#2f56d8",3);dot(c,a[2],a[3],4,"#2f56d8")});
+ text(c,"A portal/foundation document, not a domain result.",320,372,13,"#5d6675","center");
+}
+function drawLoop(k=0){
+ const c=C("loopCanvas");clear(c); text(c,"A10 structured-prior loop",320,30,20,"#161a22","center","850");
+ const labels=["mission","boundaries","surrogate","prior/gate","robust eval","claim boundary"];
+ const coords=[[110,135],[290,105],[470,135],[470,285],[290,315],[110,285]];
+ for(let i=0;i<labels.length;i++){
+   const [x,y]=coords[i]; const active=i<=k;
+   rect(c,x-62,y-36,124,72,18,active?"#eaf0ff":"#f7f9fc",active?"#8098ff":"#d9dee8");
+   text(c,labels[i],x,y+5,13,active?"#16389f":"#5d6675","center","800");
+   const [nx,ny]=coords[(i+1)%labels.length];
+   const sx=x+(nx-x)*0.36, sy=y+(ny-y)*0.36, ex=x+(nx-x)*0.64, ey=y+(ny-y)*0.64;
+   line(c,sx,sy,ex,ey,active?"#2f56d8":"#c2c9d5",3); dot(c,ex,ey,4,active?"#2f56d8":"#c2c9d5");
+ }
+ text(c,"mission-variable preservation under hard constraints and uncertainty",320,392,13,"#5d6675","center");
+}
+let loopTimer=null;
+function animateLoop(){resetLoop();let k=0;loopTimer=setInterval(()=>{for(let i=0;i<6;i++)document.getElementById("loop"+i).classList.toggle("active",i<=k);drawLoop(k);k++;if(k>=6){clearInterval(loopTimer);loopTimer=null}},800)}
+function resetLoop(){if(loopTimer)clearInterval(loopTimer);loopTimer=null;for(let i=0;i<6;i++)document.getElementById("loop"+i).classList.toggle("active",i===0);drawLoop(0)}
+function drawLayers(){
+ const c=C("layersCanvas");clear(c); text(c,"Layered role of A10",320,30,20,"#161a22","center","850");
+ const layers=[
+  ["publication discipline",130,95,380,"#fff1f1"],
+  ["evaluation: robustness / tail risk",165,150,310,"#fff7ec"],
+  ["model: reduced surrogate + prior",200,205,240,"#f1edff"],
+  ["mission variable / constraints",235,260,170,"#eef3ff"]
+ ];
+ layers.forEach(L=>{rect(c,L[1],L[2],L[3],50,16,L[4]);text(c,L[0],320,L[2]+31,14,"#161a22","center","800")});
+ text(c,"A10 organizes how to build and evaluate constrained models.",320,372,13,"#5d6675","center");
+}
+function drawDomains(){
+ const c=C("domainsCanvas");clear(c); text(c,"Core does not validate applications automatically",320,30,19,"#161a22","center","850");
+ rect(c,240,70,160,70,18,"#eef3ff","#8098ff"); text(c,"A10 Core",320,112,15,"#16389f","center","850");
+ const ds=[["cosmology",100,230],["BMS",230,260],["cooling",360,260],["UAPST",490,230],["QOC",170,340],["moderation",470,340]];
+ ds.forEach(d=>{rect(c,d[1]-58,d[2]-32,116,64,16,"#f7f9fc");text(c,d[0],d[1],d[2]+5,13,"#161a22","center","800");line(c,320,140,d[1],d[2]-34,"#2f56d8",2);dot(c,d[1],d[2]-34,4,"#2f56d8")});
+ text(c,"Each branch needs its own evidence, null tests, and expert review.",320,392,13,"#5d6675","center");
+}
+function redraw(){drawReader();drawLoop(0);drawLayers();drawDomains()}
+window.addEventListener("resize",redraw); redraw();
+</script>
+</body>
+</html>
